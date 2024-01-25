@@ -9,11 +9,16 @@
             <img class="card-img-top"
                  src="/media/{{object.photo}}"
                  alt="Card image cap">
-
-
             <div class="card-body">
                 <p class="card-text">{{object.name|title}}</p>
             </div>
+            <div class="card-footer">
+                <a class="btn-btn-link" href="{% url 'dogs:dog_update' object.pk %}">Изменить</a>
+                <a class="btn btn-outline-danger float-right" href="{% url 'dogs:dog_delete' object.pk %}">Удалить</a>
+
+            </div>
+
+
         </div>
     </div>
 </div>
